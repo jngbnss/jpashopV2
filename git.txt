@@ -8,8 +8,8 @@ git push -u origin main
 git pull origin main
 
 git add .
-git commit -m "save"
+git commit -m "09/30 9:56 2.도메인 분석 설계 완료"
 git push
 
-
-
+09/30 9:42 2.도메인 분석 설계
+09/30 9:56 2.도메인 분석 설계 완료
