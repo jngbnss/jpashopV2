@@ -8,7 +8,7 @@ git push -u origin main
 git pull origin main
 
 git add .
-git commit -m "10/02 12:23 API 개발 기본"
+git commit -m "10/02 3:18 v2 dto 타이핑 진행 완료"
 git push
 
 09/30 9:42 2.도메인 분석 설계
@@ -22,3 +22,6 @@ git push
 
 10/02 11:05 API 개발 기본
 10/02 12:23 API 개발 기본
+
+10/02 3:12 v2 dto 타이핑 진행
+10/02 3:18 v2 dto 타이핑 진행 완료
