@@ -8,7 +8,7 @@ git push -u origin main
 git pull origin main
 
 git add .
-git commit -m "12:45"
+git commit -m "10/02 12:23 API 개발 기본"
 git push
 
 09/30 9:42 2.도메인 분석 설계
@@ -19,3 +19,6 @@ git push
 
 12:45 초과오류가 안나옴
 12:50 추가로 붙임
+
+10/02 11:05 API 개발 기본
+10/02 12:23 API 개발 기본
