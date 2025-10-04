@@ -5,6 +5,8 @@ import jpabookV2.jpashop.domain.Order;
 import jpabookV2.jpashop.domain.OrderSearch;
 import jpabookV2.jpashop.domain.OrderStatus;
 import jpabookV2.jpashop.repository.OrderRepository;
+import jpabookV2.jpashop.repository.order.simplequery.OrderSimpleQueryDto;
+import jpabookV2.jpashop.repository.order.simplequery.OrderSimpleQueryRepository;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -49,5 +51,19 @@ public class OrderSimpleApiController {
     // N+1 문제 발생
 
     //v3 페치조인하기
+    @GetMapping("/api/v3/simple-orders")
+    public List<SimpleOrderDto>ordersV3(){
+        List<Order> orders = orderRepository.findAllWithMemberDelivery();
+        List<SimpleOrderDto> result = orders.stream().map(o -> new SimpleOrderDto(o)).collect(toList());
+        return result;
+    }
+    // 오 쿼리가 한번만 나가긴하네
+
+    private final OrderSimpleQueryRepository orderSimpleQueryRepository;
     //v4 dto로 바로 조회하기
+
+    @GetMapping("/api/v4/simple-orders")
+    public List<OrderSimpleQueryDto>ordersV4(){
+        return orderSimpleQueryRepository.findOrderDtos();
+    }
 }
